@@ -1,28 +1,27 @@
 using System;
 using Pacco.Services.Orders.Application;
 
-namespace Pacco.Services.Orders.Infrastructure.Contexts
+namespace Pacco.Services.Orders.Infrastructure.Contexts;
+
+internal class AppContext : IAppContext
 {
-    internal class AppContext : IAppContext
-    {
-        public string RequestId { get; }
-        public IIdentityContext Identity { get; }
+	public string RequestId { get; }
+	public IIdentityContext Identity { get; }
 
-        internal AppContext() : this(Guid.NewGuid().ToString("N"), IdentityContext.Empty)
-        {
-        }
+	internal AppContext() : this(Guid.NewGuid().ToString("N"), IdentityContext.Empty)
+	{
+	}
 
-        internal AppContext(CorrelationContext context) : this(context.CorrelationId,
-            context.User is null ? IdentityContext.Empty : new IdentityContext(context.User))
-        {
-        }
-        
-        internal AppContext(string requestId, IIdentityContext identity)
-        {
-            RequestId = requestId;
-            Identity = identity;
-        }
-        
-        internal static IAppContext Empty => new AppContext();
-    }
+	internal AppContext(CorrelationContext context) : this(context.CorrelationId,
+			context.User is null ? IdentityContext.Empty : new IdentityContext(context.User))
+	{
+	}
+
+	internal AppContext(string requestId, IIdentityContext identity)
+	{
+		RequestId = requestId;
+		Identity = identity;
+	}
+
+	internal static IAppContext Empty => new AppContext();
 }

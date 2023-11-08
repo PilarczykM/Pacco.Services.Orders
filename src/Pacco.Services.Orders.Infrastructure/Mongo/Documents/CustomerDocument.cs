@@ -1,10 +1,9 @@
 using System;
 using Convey.Types;
 
-namespace Pacco.Services.Orders.Infrastructure.Mongo.Documents
+namespace Pacco.Services.Orders.Infrastructure.Mongo.Documents;
+
+public class CustomerDocument : IIdentifiable<Guid>
 {
-    public class CustomerDocument : IIdentifiable<Guid>
-    {
-        public Guid Id { get; set; }
-    }
+	public Guid Id { get; set; }
 }

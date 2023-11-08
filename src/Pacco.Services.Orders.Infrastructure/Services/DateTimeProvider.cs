@@ -1,10 +1,9 @@
 using System;
 using Pacco.Services.Orders.Application.Services;
 
-namespace Pacco.Services.Orders.Infrastructure.Services
+namespace Pacco.Services.Orders.Infrastructure.Services;
+
+public class DateTimeProvider : IDateTimeProvider
 {
-    public class DateTimeProvider : IDateTimeProvider
-    {
-        public DateTime Now  => DateTime.UtcNow;
-    }
+	public DateTime Now => DateTime.UtcNow;
 }

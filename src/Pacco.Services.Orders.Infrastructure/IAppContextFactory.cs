@@ -1,9 +1,8 @@
 using Pacco.Services.Orders.Application;
 
-namespace Pacco.Services.Orders.Infrastructure
+namespace Pacco.Services.Orders.Infrastructure;
+
+public interface IAppContextFactory
 {
-    public interface IAppContextFactory
-    {
-        IAppContext Create();
-    }
+	IAppContext Create();
 }
