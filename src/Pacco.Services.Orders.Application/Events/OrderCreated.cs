@@ -1,16 +1,16 @@
 using System;
+
 using Convey.CQRS.Events;
 
-namespace Pacco.Services.Orders.Application.Events
-{
-    [Contract]
-    public class OrderCreated : IEvent
-    {
-        public Guid OrderId { get; }
+namespace Pacco.Services.Orders.Application.Events;
 
-        public OrderCreated(Guid orderId)
-        {
-            OrderId = orderId;
-        }
-    }
+[Contract]
+public class OrderCreated : IEvent
+{
+	public Guid OrderId { get; }
+
+	public OrderCreated(Guid orderId)
+	{
+		OrderId = orderId;
+	}
 }
