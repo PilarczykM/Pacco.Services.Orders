@@ -1,14 +1,5 @@
 using System;
 
-namespace Pacco.Services.Orders.Core.Entities
-{
-    public class Customer
-    {
-        public Guid Id { get; private set; }
+namespace Pacco.Services.Orders.Core.Entities;
 
-        public Customer(Guid id)
-        {
-            Id = id;
-        }
-    }
-}
+public record Customer(Guid Id) { }

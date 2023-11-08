@@ -1,0 +1,11 @@
+C:\repositories\personal\dot_net\Paco-root\Pacco.Services.Orders\src\Pacco.Services.Orders.Core\bin\Debug\net7.0\Pacco.Services.Orders.Core.deps.json
+C:\repositories\personal\dot_net\Paco-root\Pacco.Services.Orders\src\Pacco.Services.Orders.Core\bin\Debug\net7.0\Pacco.Services.Orders.Core.dll
+C:\repositories\personal\dot_net\Paco-root\Pacco.Services.Orders\src\Pacco.Services.Orders.Core\bin\Debug\net7.0\Pacco.Services.Orders.Core.pdb
+C:\repositories\personal\dot_net\Paco-root\Pacco.Services.Orders\src\Pacco.Services.Orders.Core\obj\Debug\net7.0\Pacco.Services.Orders.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\repositories\personal\dot_net\Paco-root\Pacco.Services.Orders\src\Pacco.Services.Orders.Core\obj\Debug\net7.0\Pacco.Services.Orders.Core.AssemblyInfoInputs.cache
+C:\repositories\personal\dot_net\Paco-root\Pacco.Services.Orders\src\Pacco.Services.Orders.Core\obj\Debug\net7.0\Pacco.Services.Orders.Core.AssemblyInfo.cs
+C:\repositories\personal\dot_net\Paco-root\Pacco.Services.Orders\src\Pacco.Services.Orders.Core\obj\Debug\net7.0\Pacco.Services.Orders.Core.csproj.CoreCompileInputs.cache
+C:\repositories\personal\dot_net\Paco-root\Pacco.Services.Orders\src\Pacco.Services.Orders.Core\obj\Debug\net7.0\Pacco.Services.Orders.Core.dll
+C:\repositories\personal\dot_net\Paco-root\Pacco.Services.Orders\src\Pacco.Services.Orders.Core\obj\Debug\net7.0\refint\Pacco.Services.Orders.Core.dll
+C:\repositories\personal\dot_net\Paco-root\Pacco.Services.Orders\src\Pacco.Services.Orders.Core\obj\Debug\net7.0\Pacco.Services.Orders.Core.pdb
+C:\repositories\personal\dot_net\Paco-root\Pacco.Services.Orders\src\Pacco.Services.Orders.Core\obj\Debug\net7.0\ref\Pacco.Services.Orders.Core.dll

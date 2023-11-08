@@ -1,6 +1,5 @@
-namespace Pacco.Services.Orders.Core
+namespace Pacco.Services.Orders.Core;
+
+public interface IDomainEvent
 {
-    public interface IDomainEvent
-    {
-    }
 }
