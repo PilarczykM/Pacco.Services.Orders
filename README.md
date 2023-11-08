@@ -10,11 +10,6 @@ Pacco is an open source project using microservices architecture written in .NET
 
 Pacco.Services.Orders is the microservice being part of [Pacco](https://github.com/devmentors/Pacco) solution.
 
-|Branch             |Build status                                                  
-|-------------------|-----------------------------------------------------
-|master             |[![master branch build status](https://api.travis-ci.org/devmentors/Pacco.Services.Orders.svg?branch=master)](https://travis-ci.org/devmentors/Pacco.Services.Orders)
-|develop            |[![develop branch build status](https://api.travis-ci.org/devmentors/Pacco.Services.Orders.svg?branch=develop)](https://travis-ci.org/devmentors/Pacco.Services.Orders/branches)
-
 **How to start the application?**
 ----------------
 
