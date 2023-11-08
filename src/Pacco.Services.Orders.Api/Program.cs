@@ -16,33 +16,32 @@ using Pacco.Services.Orders.Application.DTO;
 using Pacco.Services.Orders.Application.Queries;
 using Pacco.Services.Orders.Infrastructure;
 
-namespace Pacco.Services.Orders.Api 
+namespace Pacco.Services.Orders.Api;
+
+public class Program
 {
-    public class Program
-    {
-        public static async Task Main(string[] args)
-            => await WebHost.CreateDefaultBuilder(args)
-                .ConfigureServices(services => services
-                    .AddConvey()
-                    .AddWebApi()
-                    .AddApplication()
-                    .AddInfrastructure()
-                    .Build())
-                .Configure(app => app
-                    .UseInfrastructure()
-                    .UseDispatcherEndpoints(endpoints => endpoints
-                        .Get("", ctx => ctx.Response.WriteAsync(ctx.RequestServices.GetService<AppOptions>().Name))
-                        .Get<GetOrder, OrderDto>("orders/{orderId}")
-                        .Get<GetOrders, IEnumerable<OrderDto>>("orders")
-                        .Delete<DeleteOrder>("orders/{orderId}")
-                        .Post<CreateOrder>("orders",
-                            afterDispatch: (cmd, ctx) => ctx.Response.Created($"orders/{cmd.OrderId}"))
-                        .Post<AddParcelToOrder>("orders/{orderId}/parcels/{parcelId}")
-                        .Delete<DeleteParcelFromOrder>("orders/{orderId}/parcels/{parcelId}")
-                        .Post<AssignVehicleToOrder>("orders/{orderId}/vehicles/{vehicleId}")))
-                .UseLogging()
-                .UseVault()
-                .Build()
-                .RunAsync();
-    }
+	public static async Task Main(string[] args)
+			=> await WebHost.CreateDefaultBuilder(args)
+					.ConfigureServices(services => services
+							.AddConvey()
+							.AddWebApi()
+							.AddApplication()
+							.AddInfrastructure()
+							.Build())
+					.Configure(app => app
+							.UseInfrastructure()
+							.UseDispatcherEndpoints(endpoints => endpoints
+									.Get("", ctx => ctx.Response.WriteAsync(ctx.RequestServices.GetService<AppOptions>().Name))
+									.Get<GetOrder, OrderDto>("orders/{orderId}")
+									.Get<GetOrders, IEnumerable<OrderDto>>("orders")
+									.Delete<DeleteOrder>("orders/{orderId}")
+									.Post<CreateOrder>("orders",
+											afterDispatch: (cmd, ctx) => ctx.Response.Created($"orders/{cmd.OrderId}"))
+									.Post<AddParcelToOrder>("orders/{orderId}/parcels/{parcelId}")
+									.Delete<DeleteParcelFromOrder>("orders/{orderId}/parcels/{parcelId}")
+									.Post<AssignVehicleToOrder>("orders/{orderId}/vehicles/{vehicleId}")))
+					.UseLogging()
+					.UseVault()
+					.Build()
+					.RunAsync();
 }
